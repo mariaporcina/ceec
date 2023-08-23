@@ -1,13 +1,17 @@
 # Contabilist - Controle de Empresas de um Escritório de Contabilidade
 
-~ inserir descrição ~
+O Contabilist é um sistema utilizado por escritórios de contabilidade para o controle e gestão contábil das empresas cliente.
+O sistema apresenta como algumas de suas principais funcionalidades o cadastro, edição dos dados e remoção de empresas cadastradas, além da listagem de todas as empresas.
+
+O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Endereço de Deploy - GitHub Pages
 
-~ inserir link de deploy ~
+~ inserir link de deploy, assim que disponível ~
 
-Protótipo
-~ inserir link do figma ~
+## Protótipo
+
+[Link para o Figma](https://www.figma.com/file/u2EdH8H2ZdrWQba53D14tq/Contabilist?type=design&node-id=0%3A1&mode=design&t=3FPLIVYK40h0UUtK-1)
 
 ## Checklist
 
