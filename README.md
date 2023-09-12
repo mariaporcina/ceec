@@ -11,7 +11,7 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 ## Protótipo
 
-[Link para o Figma](https://www.figma.com/file/u2EdH8H2ZdrWQba53D14tq/Contabilist?type=design&node-id=0%3A1&mode=design&t=3FPLIVYK40h0UUtK-1)
+[Link para o Figma](https://www.figma.com/file/Jgk1Gzk14xjlOer6w0YrFg/Contabilist?type=design&node-id=2%3A43&mode=design&t=mixb6P74vqDdVwi0-1)
 
 ## Checklist
 
