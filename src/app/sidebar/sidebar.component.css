@@ -3,7 +3,12 @@
   min-width: 300px;
   max-width: 300px;
   transition: all 0.3s;
-  height: calc(100vh - 66px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 65px;
+  z-index: -1;
 }
 
 .content{

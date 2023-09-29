@@ -1,0 +1,18 @@
+footer {
+    width: 100%;
+    max-width: calc(100% - 300px);
+    margin: 0 0 0 auto;
+}
+footer .row {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer p {
+    font-weight: 500;
+    margin: 0;
+}
+footer p strong{
+    color: #D1972C;
+    font-weight: 500;
+}
