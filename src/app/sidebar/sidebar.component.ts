@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class SidebarComponent {
+  isOpen = true;
 
+  handleMenu() {
+    this.isOpen = !this.isOpen;
+  }
 }

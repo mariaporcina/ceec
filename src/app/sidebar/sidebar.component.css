@@ -11,6 +11,18 @@
   z-index: -1;
 }
 
+.isclosed {
+  display: none !important;
+}
+
+#true {
+  display: block;
+}
+
+#false {
+  display: none;
+}
+
 .content{
   min-height: 100vh;
   width: 100%;

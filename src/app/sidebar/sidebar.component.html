@@ -1,18 +1,22 @@
-<aside class="d-flex flex-column justify-content-sm-between sidebar">
-    <nav class="sidebar__nav">
-        <ul class="list-unstyled px-10">
-            <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
-                <i class="far fa-folder fa-2x"></i> <font size="5">Empresas</font>
-                </a>
-            </li>
-            <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
-                <i class="fas fa-users fa-2x"></i> <font size="5">Usuários</font>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<aside [id]="isOpen">
+    <button type="button" (click)="handleMenu()">Abrir</button>
 
-    <figure class="mb-1 sidebar__logo text-center">
-        <img class="w-100" src="assets/resources/images/logo.svg" alt="Contabilist logo">
-    </figure>
+    <div class="container-sidebar d-flex flex-column justify-content-sm-between sidebar">
+        <nav class="sidebar__nav">
+            <ul class="list-unstyled px-10">
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="far fa-folder fa-2x"></i> <font size="5">Empresas</font>
+                    </a>
+                </li>
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fas fa-users fa-2x"></i> <font size="5">Usuários</font>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <figure class="mb-1 sidebar__logo text-center">
+            <img class="w-100" src="assets/resources/images/logo.svg" alt="Contabilist logo">
+        </figure>
+    </div>
 </aside>
