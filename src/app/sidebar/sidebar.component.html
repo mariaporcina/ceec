@@ -1,15 +1,19 @@
-<aside [id]="isOpen">
-    <button type="button" (click)="handleMenu()">Abrir</button>
+<aside [id]="isActive">
+    <button class="buttonMenu" type="button" (click)="handleMenu($event)"><i class="fas fa-solid fa-bars fa-2x" style="color: #D1972C;"></i></button>
 
     <div class="container-sidebar d-flex flex-column justify-content-sm-between sidebar">
         <nav class="sidebar__nav">
             <ul class="list-unstyled px-10">
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
-                    <i class="far fa-folder fa-2x"></i> <font size="5">Empresas</font>
+                <li>
+                    <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                        <i class="far fa-folder fa-2x"></i>
+                        <font size="5">Empresas</font>
                     </a>
                 </li>
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
-                    <i class="fas fa-users fa-2x"></i> <font size="5">Usuários</font>
+                <li>
+                    <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                        <i class="fas fa-users fa-2x"></i>
+                        <font size="5">Usuários</font>
                     </a>
                 </li>
             </ul>

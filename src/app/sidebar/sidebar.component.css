@@ -1,3 +1,7 @@
+#activeMenu .sidebar {
+  left: 0;
+}
+
 .sidebar {
   background: #000;
   min-width: 300px;
@@ -6,31 +10,22 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   padding-top: 65px;
-  z-index: -1;
 }
 
-.isclosed {
-  display: none !important;
+.buttonMenu {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: normal;position: absolute;
+  top: 16px;
+  right: 12px;
+  z-index: 1;
 }
 
-#true {
-  display: block;
-}
-
-#false {
-  display: none;
-}
-
-.content{
-  min-height: 100vh;
-  width: 100%;
-}
-
-hr.h-color{
-  background: #D1972C;
-  opacity: 1;
+.sidebar__nav {
+  
 }
 
 .sidebar li {
@@ -67,15 +62,12 @@ hr.h-color{
   max-width: 150px;
 }
 
-@media(max-width: 767px){
-  #side_nav{
-    margin-left: -500px;
-    position: absolute;
-    min-height: 100vh;
-    z-index: 1;
-
+@media screen and (min-width: 768px){
+  .sidebar {
+    left: 0;
   }
-  #side_nav.active{
-    margin-left: 0;
+  
+  .buttonMenu {
+    display: none;
   }
 }
