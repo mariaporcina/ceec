@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { CompaniesComponent } from './companies/companies.component';
+import { CompaniesComponent } from './newcompany/companies/companies.component';
 import { NewcompanyComponent } from './newcompany/newcompany.component';
 import { UsersComponent } from './users/users.component';
 import { MyuserComponent } from './myuser/myuser.component';

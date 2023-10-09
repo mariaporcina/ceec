@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,
+         Input
+ } from '@angular/core';
 
 @Component({
   selector: 'app-companies',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent {
-
+  @Input() nome = '';
 }

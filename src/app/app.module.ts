@@ -7,7 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { CompaniesComponent } from './companies/companies.component';
+import { CompaniesComponent } from './newcompany/companies/companies.component';
 import { UsersComponent } from './users/users.component';
 import { MyuserComponent } from './myuser/myuser.component';
 import { NewcompanyComponent } from './newcompany/newcompany.component';
