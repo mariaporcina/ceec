@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { UsersComponent } from './users/users.component';
 import { MyuserComponent } from './myuser/myuser.component';
+import { NewcompanyComponent } from './newcompany/newcompany.component';
+import { NewuserComponent } from './newuser/newuser.component';
+import { LoginComponent } from './login/login.component';
+import { CompanyComponent } from './company/company.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { MyuserComponent } from './myuser/myuser.component';
     HomeComponent,
     CompaniesComponent,
     UsersComponent,
-    MyuserComponent
+    MyuserComponent,
+    NewcompanyComponent,
+    NewuserComponent,
+    LoginComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
