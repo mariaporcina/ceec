@@ -21,25 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <a routerLink="/empresas/0">
-                            <p>{{nome}}</p>
-                            <p>Corinthians</p>
-                        </a>
-                    </td>
-                    <td>
-                        <p>12.123.123/0001-12</p>
-                        <p>(00) 9 9999-9999</p>
-                    </td>
-                    <td>
-                        <p>São Paulo</p>
-                        <p>São Paulo</p>
-                    </td>
-                    <td>
-                        <p>Ativa</p>
-                    </td>
-                </tr>
+                <app-company-item companyId="0" [corporateName]="companyCorporateName" (showNameEvent)="showName()"></app-company-item>
             </tbody>
         </table>
     </div>

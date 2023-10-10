@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./newcompany.component.css']
 })
 export class NewcompanyComponent {
-  primeiraEmp = 'Oi';
+
 }
