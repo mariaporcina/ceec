@@ -1,0 +1,19 @@
+.sectionCommon {
+    max-width: calc(100% - 300px);
+    margin: 0 0 0 auto;
+}
+
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+table p {
+    margin: 0;
+}
