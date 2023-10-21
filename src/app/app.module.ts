@@ -7,14 +7,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { CompaniesComponent } from './companies/companies.component';
+import { CompaniesPageComponent } from './companies/companies-page/companies-page.component';
 import { UsersComponent } from './users/users.component';
 import { MyuserComponent } from './myuser/myuser.component';
-import { NewcompanyComponent } from './newcompany/newcompany.component';
+import { NewcompanyComponent } from './companies/newcompany/newcompany.component';
 import { NewuserComponent } from './newuser/newuser.component';
 import { LoginComponent } from './login/login.component';
-import { CompanyComponent } from './company/company.component';
+import { CompanyPageComponent } from './companies/company-page/company-page.component';
 import { CompanyItemComponent } from './companies/company-item/company-item.component';
+import { CompanyFormComponent } from './companies/company-form/company-form.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { CompanyItemComponent } from './companies/company-item/company-item.comp
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    CompaniesComponent,
+    CompaniesPageComponent,
     UsersComponent,
     MyuserComponent,
     NewcompanyComponent,
     NewuserComponent,
     LoginComponent,
-    CompanyComponent,
-    CompanyItemComponent
+    CompanyPageComponent,
+    CompanyItemComponent,
+    CompanyFormComponent
   ],
   imports: [
     BrowserModule,

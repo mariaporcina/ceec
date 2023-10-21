@@ -1,0 +1,31 @@
+form {}
+
+.form-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100%;
+}
+label p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+label input{}
+label select{}
+
+label input,
+label select{
+    display: block;
+    width: 100%;
+}
+
+.defaultButton {}
+.defaultButton a{}
+.defaultButton button{}
