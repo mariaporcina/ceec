@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-companies',
-  templateUrl: './companies.component.html',
-  styleUrls: ['./companies.component.css']
+  selector: 'app-companies-page',
+  templateUrl: './companies-page.component.html',
+  styleUrls: ['./companies-page.component.css']
 })
-export class CompaniesComponent {
+export class CompaniesPageComponent {
   companyCorporateName: string = "";
 
   showName() {
