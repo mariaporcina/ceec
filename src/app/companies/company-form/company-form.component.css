@@ -24,8 +24,16 @@ label input,
 label select{
     display: block;
     width: 100%;
+    padding: 5px;
+    border: 1px solid #6D6D6D;
+    border-radius: 3px;
+    height: 40px;
+    background-color: #f7f7f7;
 }
 
 .defaultButton {}
 .defaultButton a{}
+.defaultButton button{}
+
+.defaultButton a,
 .defaultButton button{}

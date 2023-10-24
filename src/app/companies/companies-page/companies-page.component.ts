@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-companies-page',
   templateUrl: './companies-page.component.html',
-  styleUrls: ['./companies-page.component.css', '../../app.component.css']
+  styleUrls: ['./companies-page.component.css']
 })
 export class CompaniesPageComponent {
   companyCorporateName: string = "";

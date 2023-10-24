@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-company-item',
   templateUrl: './company-item.component.html',
-  styleUrls: ['./company-item.component.css', '../../app.component.css']
+  styleUrls: ['./company-item.component.css']
 })
 export class CompanyItemComponent {
   @Input() companyId!: string;

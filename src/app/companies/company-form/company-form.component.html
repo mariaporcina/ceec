@@ -3,56 +3,63 @@
         <div class="row">
             <div class="col-7">
                 <label for="businessName">
-                    <p>Razão Social</p>
-                    <input type="text" name="businessName" id="businessName">
+                    <p>Razão Social *</p>
+                    <input type="text" name="businessName" id="businessName" placeholder="Sport Clube Corinthians" required>
                 </label>
             </div>
             <div class="col-5">
                 <label for="cnpj">
-                    <p>CNPJ</p>
-                    <input type="text" name="cnpj" id="cnpj">
+                    <p>CNPJ *</p>
+                    <input type="text" name="cnpj" id="cnpj" required placeholder="00.000.000/0001-00">
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="col-7">
                 <label for="name">
-                    <p>Nome Fantasia</p>
-                    <input type="text" name="name" id="name">
+                    <p>Nome Fantasia *</p>
+                    <input type="text" name="name" id="name" required placeholder="Corinthians">
                 </label>
             </div>
             <div class="col-5">
                 <label for="phone">
-                    <p>Telefone</p>
-                    <input type="tel" name="phone" id="phone">
+                    <p>Telefone *</p>
+                    <input type="tel" name="phone" id="phone" required placeholder="(11) 9 9999-9999">
                 </label>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <label for="city">
-                    <p>Cidade</p>
-                    <input type="text" name="city" id="city">
+                    <p>CEP *</p>
+                    <input type="text" name="city" id="city" required placeholder="80000-000">
                 </label>
             </div>
-            <div class="col-6">
+            <div class="col-4">
+                <label for="city">
+                    <p>Cidade *</p>
+                    <input type="text" name="city" id="city" disabled required placeholder="São Paulo">
+                </label>
+            </div>
+            <div class="col-4">
                 <label for="state">
-                    <p>Estado</p>
-                    <input type="text" name="state" id="state">
+                    <p>Estado *</p>
+                    <input type="text" name="state" id="state" disabled required placeholder="São Paulo">
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="col-7">
                 <label for="email">
-                    <p>Endereço de E-mail</p>
-                    <input type="email" name="email" id="email">
+                    <p>Endereço de E-mail *</p>
+                    <input type="email" name="email" id="email" required placeholder="corinthians@gmail.com">
                 </label>
             </div>
             <div class="col-5">
                 <label for="status">
-                    <p>Ativa?</p>
-                    <select name="status" id="status">
+                    <p>Ativa? *</p>
+                    <select name="status" id="status" required>
+                        <option>--</option>
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>

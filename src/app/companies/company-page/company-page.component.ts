@@ -6,7 +6,7 @@ import { Company } from '../../model/company';
 @Component({
   selector: 'app-company-page',
   templateUrl: './company-page.component.html',
-  styleUrls: ['./company-page.component.css', '../../app.component.css']
+  styleUrls: ['./company-page.component.css']
 })
 export class CompanyPageComponent {
   company!: Company;
