@@ -4,8 +4,6 @@
 
 .sidebar {
   background: #000;
-  min-width: 300px;
-  max-width: 300px;
   transition: all 0.3s;
   height: 100vh;
   position: fixed;
@@ -24,7 +22,7 @@
   z-index: 1;
 }
 
-.sidebar__nav {
+.sidebar_nav {
   
 }
 
