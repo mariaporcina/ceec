@@ -7,7 +7,7 @@ form {}
 }
 
 .row {
-    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 label {
@@ -26,7 +26,7 @@ label select{
     width: 100%;
     padding: 5px;
     border: 1px solid #6D6D6D;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 40px;
     background-color: #f7f7f7;
 }

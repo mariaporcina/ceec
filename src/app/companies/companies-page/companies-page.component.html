@@ -1,28 +1,26 @@
-<section class="sectionCommon sectionCommon--companies">
-    <div class="container-fluid">
-        <table class="companiesList">
-            <thead>
-                <tr>
-                    <th>
-                        <p>Razão Social</p>
-                        <p>Nome Fantasia</p>
-                    </th>
-                    <th>
-                        <p>CNPJ</p>
-                        <p>Telefone</p>
-                    </th>
-                    <th>
-                        <p>Cidade</p>
-                        <p>Estado</p>
-                    </th>
-                    <th>
-                        <p>Situação</p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <app-company-item companyId="0" [corporateName]="companyCorporateName" (showNameEvent)="showName()"></app-company-item>
-            </tbody>
-        </table>
-    </div>
-</section>
+<div class="container-fluid">
+    <table class="companiesList">
+        <thead>
+            <tr>
+                <th>
+                    <p>Razão Social</p>
+                    <p>Nome Fantasia</p>
+                </th>
+                <th>
+                    <p>CNPJ</p>
+                    <p>Telefone</p>
+                </th>
+                <th>
+                    <p>Cidade</p>
+                    <p>Estado</p>
+                </th>
+                <th>
+                    <p>Situação</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <app-company-item companyId="0" [corporateName]="companyCorporateName" (showNameEvent)="showName()"></app-company-item>
+        </tbody>
+    </table>
+</div>
