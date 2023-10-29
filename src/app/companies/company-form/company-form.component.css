@@ -16,9 +16,9 @@ label {
 label p{
     margin: 0;
     margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Nunito';
 }
-label input{}
-label select{}
 
 label input,
 label select{
@@ -31,9 +31,6 @@ label select{
     background-color: #f7f7f7;
 }
 
-.defaultButton {}
-.defaultButton a{}
-.defaultButton button{}
-
-.defaultButton a,
-.defaultButton button{}
+.validation-error p {
+    color: red;
+}

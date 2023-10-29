@@ -1,69 +1,96 @@
-<form>
+<form (ngSubmit)="submit()" [formGroup]="companyForm" #formDir="ngForm">
     <div class="form-container offset-lg-3 ofset-xl-3">
         <div class="row">
             <div class="col-lg-7 col-xl-7 col-sm-12 col-md-12">
-                <label for="businessName">
+                <label for="businessName"> 
                     <p>Razão Social *</p>
-                    <input type="text" name="businessName" id="businessName" placeholder="Sport Clube Corinthians" required>
+                    <input type="text" name="businessName" id="businessName" placeholder="Sport Clube Corinthians" formControlName="businessName" required>
                 </label>
+                <div *ngIf="businessName.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="businessName.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
             <div class="col-lg-5 col-xl-5 col-sm-12 col-md-12">
                 <label for="cnpj">
                     <p>CNPJ *</p>
-                    <input type="text" name="cnpj" id="cnpj" required placeholder="00.000.000/0001-00">
+                    <input type="text" name="cnpj" id="cnpj" formControlName="cnpj" required placeholder="00.000.000/0001-00">
                 </label>
+                <div *ngIf="cnpj.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="cnpj.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-7 col-xl-7 col-sm-12 col-md-12">
-                <label for="name">
+                <label for="fantasia">
                     <p>Nome Fantasia *</p>
-                    <input type="text" name="name" id="name" required placeholder="Corinthians">
+                    <input type="text" name="fantasia" id="fantasia" formControlName="fantasia" required placeholder="Corinthians">
                 </label>
+                <div *ngIf="fantasia.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="fantasia.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
             <div class="col-lg-5 col-xl-5">
                 <label for="phone">
                     <p>Telefone *</p>
-                    <input type="tel" name="phone" id="phone" required placeholder="(11) 9 9999-9999">
+                    <input type="tel" name="phone" id="phone" formControlName="phone" required placeholder="(11) 9 9999-9999">
                 </label>
+                <div *ngIf="phone.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="phone.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-xl-4">
-                <label for="city">
+                <label for="cep">
                     <p>CEP *</p>
-                    <input type="text" name="city" id="city" required placeholder="80000-000">
+                    <input type="text" name="cep" id="cep" formControlName="cep" required placeholder="80000-000">
                 </label>
+                <div *ngIf="cep.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="cep.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
             <div class="col-lg-4 col-xl-4">
                 <label for="city">
                     <p>Cidade *</p>
-                    <input type="text" name="city" id="city" disabled required placeholder="São Paulo">
+                    <input type="text" name="city" id="city" formControlName="city" required placeholder="São Paulo">
                 </label>
+                <div *ngIf="city.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="city.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
             <div class="col-lg-4 col-xl-4">
                 <label for="state">
                     <p>Estado *</p>
-                    <input type="text" name="state" id="state" disabled required placeholder="São Paulo">
+                    <input type="text" name="state" id="state" formControlName="state" required placeholder="São Paulo">
                 </label>
+                <div *ngIf="state.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="state.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-7 col-sm-10 col-md-10">
                 <label for="email">
                     <p>Endereço de E-mail *</p>
-                    <input type="email" name="email" id="email" required placeholder="corinthians@gmail.com">
+                    <input type="email" name="email" id="email" formControlName="email" required placeholder="corinthians@gmail.com">
                 </label>
+                <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="email.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
             <div class="col-5 col-sm-2 col-md-2">
                 <label for="status">
                     <p>Ativa? *</p>
-                    <select name="status" id="status" required>
+                    <select name="status" id="status" formControlName="status" required>
                         <option>--</option>
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>
                 </label>
+                <div *ngIf="status.invalid && formDir.submitted" class="validation-error">
+                    <p *ngIf="status.errors?.['required']"> Campo Obrigatório</p>
+                </div>
             </div>
         </div>
         <div class="row">
