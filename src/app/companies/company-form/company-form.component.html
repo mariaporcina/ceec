@@ -1,5 +1,5 @@
-<form [formGroup]="newCompanyForm" (ngSubmit)="onSubmit()">
-    <div class="form-container">
+<form [formGroup]="newCompanyForm" (ngSubmit)="submit()" #formDir="ngForm">
+    <div class="form-container offset-3">
         <span class="form-message">Campos marcados com asterísco são obrigatórios. (*)</span>
 
         <div class="row">
@@ -16,7 +16,12 @@
                         minlength="3"
                     >
                 </label>
+                <div *ngIf="businessName.invalid && businessName.touched">
+                    <p *ngIf="businessName.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                </div>
             </div>
+
+
             <div class="col-4">
                 <label for="status">
                     <p>Ativa? *</p>
@@ -24,10 +29,15 @@
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>
+
                 </label>
+                <div *ngIf="status.invalid && status.touched">
+                    <p *ngIf="status.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                </div>
                 
             </div>
         </div>
+
         <div class="row">
             <div class="col-12">
                 <label for="name">
@@ -41,9 +51,14 @@
                         required
                         minlength="3"
                     >
+
                 </label>
+                <div *ngIf="name.invalid && name.touched">
+                    <p *ngIf="name.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-4">
                 <label for="cnpj">
@@ -58,10 +73,14 @@
                         minlength="18"
                         maxlength="18"
                         pattern="^\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}$"
-                        (keyup)="validateInput($event)"
                     >
                 </label>
+                <div *ngIf="cnpj.invalid && cnpj.touched">
+                    <p *ngIf="cnpj.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    <p *ngIf="cnpj.errors?.['pattern']" class="form-message form-warning">CNPJ inválido</p>
+                </div>
             </div>
+
             <div class="col-4">
                 <label for="email">
                     <p>Endereço de E-mail *</p>
@@ -73,8 +92,13 @@
                         placeholder="corinthians@gmail.com"
                         required
                         minlength="5"
+                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                     >
                 </label>
+                <div *ngIf="email.invalid && email.touched">
+                    <p *ngIf="email.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    <p *ngIf="email.errors?.['pattern']" class="form-message form-warning">Endereço de email inválido</p>
+                </div>
             </div>
             <div class="col-4">
                 <label for="phone">
@@ -88,13 +112,20 @@
                         required
                         minlength="16"
                         maxlength="16"
+                        pattern="^\([0-9]{2}\)\s[0-9]\s[0-9]{4}-[0-9]{4}$"
                     >
                 </label>
+                <div *ngIf="phone.invalid && phone.touched">
+                    <p *ngIf="phone.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    <p *ngIf="phone.errors?.['pattern']" class="form-message form-warning">Número de telefone inválido</p>
+                </div>
             </div>
+            
         </div>
+        
         <div class="row">
-            <div class="col-4">
-                <label for="city">
+            <div class="col-lg-4 col-xl-4">
+                <label for="cep">
                     <p>CEP *</p>
                     <input
                         formControlName="cep"
@@ -105,27 +136,34 @@
                         required
                         minlength="9"
                         maxlength="9"
+                        pattern="^[0-9]{5}-[0-9]{3}$"
                     >
                 </label>
+                <div *ngIf="cep.invalid && cep.touched">
+                    <p *ngIf="cep.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    <p *ngIf="cep.errors?.['pattern']" class="form-message form-warning">CEP inválido</p>
+                </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-xl-4">
                 <label for="city">
                     <p>Cidade *</p>
-                    <input type="text" name="city" id="city" placeholder="São Paulo" disabled required>
-                    <span class="form-message">Campo preenchido automáticamente a partir do CEP</span>
+                    <input type="text" name="city" id="city" formControlName="city" placeholder="São Paulo" required>
                 </label>
+                <div *ngIf="city.invalid && city.touched">
+                    <p *ngIf="city.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-xl-4">
                 <label for="state">
                     <p>Estado *</p>
-                    <input type="text" name="state" id="state" placeholder="São Paulo" disabled required>
-                    <span class="form-message">Campo preenchido automáticamente a partir do CEP</span>
+                    <input type="text" name="state" id="state" formControlName="state" placeholder="São Paulo" required>
                 </label>
+                <div *ngIf="state.invalid && state.touched">
+                    <p *ngIf="state.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                </div>
             </div>
         </div>
 
-        <span class="form-message form-warning">{{ this.formWarning }}</span>
-        
         <div class="row">
             <div class="col-6">
                 <div class="goBackButton defaultButton">

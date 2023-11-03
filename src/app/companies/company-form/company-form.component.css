@@ -3,18 +3,21 @@ form {}
 .form-container {
     width: 100%;
     max-width: 1200px;
-    margin: 30px auto;
+    padding-top: 100px;
 }
 
 .row {
-    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .form-message {
-    color: #d50f22;
+    color: #454545;
     font-size: 0.9rem;
     margin-bottom: 10px;
     display: inline-block;
+}
+.form-message.form-warning {
+    color: #d50f22;
 }
 
 label {
@@ -23,9 +26,9 @@ label {
 label p{
     margin: 0;
     margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Nunito';
 }
-label input{}
-label select{}
 
 label input,
 label select{
@@ -33,7 +36,7 @@ label select{
     width: 100%;
     padding: 5px;
     border: 1px solid #6D6D6D;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 40px;
     background-color: #f7f7f7;
 }
@@ -58,3 +61,6 @@ label .form-message{
 
 .defaultButton a,
 .defaultButton button{}
+.validation-error p {
+    color: red;
+}
