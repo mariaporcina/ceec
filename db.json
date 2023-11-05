@@ -1,0 +1,100 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "businessName": "Nome da Empresa 1",
+      "cnpj": "00.000.000/0000-00",
+      "name": "Nome Fantasia 1",
+      "phone": "(11) 9 9999-9999",
+      "cep": "80000-000",
+      "city": "São Paulo",
+      "state": "São Paulo",
+      "email": "empresa1@gmail.com",
+      "status": "true"
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 2
+    },
+    {
+      "businessName": "asdasdasd",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 3
+    },
+    {
+      "businessName": "asdasdasd",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 4
+    },
+    {
+      "businessName": "dsfgsdfgsdf",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 5
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 6
+    },
+    {
+      "businessName": "dsfgsdfgsdf",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 7
+    },
+    {
+      "businessName": "sdfasfgadfhgbadfg",
+      "cnpj": "51.321.321/6213-21",
+      "name": "sdgSDGsdg",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "asdasdsA@gmail.com",
+      "status": "false",
+      "id": 8
+    }
+  ]
+}

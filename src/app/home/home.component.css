@@ -11,50 +11,6 @@ a[routerLink] {
     text-decoration: none;
 }
 
-.square {
-    background-color: white;
-    text-align: center;
-    border: 1px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.square p {
-    padding-bottom: 0;
-}
-
-
-.squareB { 
-    background-color: white;
-    text-align: center;
-    border: 1px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 992px) {
-    .square {
-        margin-left: 450px;
-        width: 300px;
-        height: 200px;
-    }
-    .squareB {
-        margin-left: 50px;
-        width: 300px;
-        height: 200px;
-    }
-}
-
-@media (max-width: 991px) {
-    .square {
-        margin-left: 10px;
-
-    }
-    .squareB {
-        margin-right: 10px;
-    }
+.align-right {
+    margin-left: auto;
 }

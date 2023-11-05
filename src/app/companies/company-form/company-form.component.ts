@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CompanyService } from 'src/app/services/empresa.service';
 
 @Component({
   selector: 'app-company-form',
@@ -13,7 +14,27 @@ export class CompanyFormComponent implements OnInit {
   newCompanyForm!: FormGroup;
   formWarning: string = '';
 
-  constructor() { }
+  constructor(private companyService: CompanyService) { }
+
+  formatCnpj(cnpj: string) {
+    cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+    return cnpj;
+  }
+  onCnpjInput(event: any) {
+    const inputCnpj = event.target.value;
+    const formattedCnpj = this.formatCnpj(inputCnpj);
+    this.newCompanyForm.get('cnpj')?.setValue(formattedCnpj, { emitEvent: false });
+  }
+
+  formatPhone(phone: string) {
+    phone = phone.replace(/(\d{2})(\d)(\d{4})(\d{4})/, '($1) $2 $3-$4');
+    return phone;
+  }
+  onPhoneInput(event: any) {
+    const inputPhone = event.target.value;
+    const formattedPhone = this.formatPhone(inputPhone);
+    this.newCompanyForm.get('phone')?.setValue(formattedPhone, { emitEvent: false });
+  }
 
   ngOnInit(): void {
     this.newCompanyForm = new FormGroup({
@@ -57,11 +78,22 @@ export class CompanyFormComponent implements OnInit {
     return this.newCompanyForm.get('status')!;
   }
 
-  submit() { 
+  async submit() { 
     if (this.newCompanyForm.invalid) {
       this.formWarning = "Por favor, preencha todos os campos corretamente.";
       return;
     }
     this.formWarning = "";
+
+    const companyData = this.newCompanyForm.value;
+
+    try {
+      const response = await this.companyService.addCompany(companyData);
+      console.log('Empresa adicionada com sucesso', response);
+      //TODO
+      // Limpar o formulário
+    } catch (error) {
+      console.error('Erro ao adicionar empresa', error);
+    }
   }
 }

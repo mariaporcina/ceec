@@ -72,7 +72,7 @@
                         required
                         minlength="18"
                         maxlength="18"
-                        pattern="^\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}$"
+                        (input)="onCnpjInput($event)"
                     >
                 </label>
                 <div *ngIf="cnpj.invalid && cnpj.touched">
@@ -112,7 +112,7 @@
                         required
                         minlength="16"
                         maxlength="16"
-                        pattern="^\([0-9]{2}\)\s[0-9]\s[0-9]{4}-[0-9]{4}$"
+                        (input)="onPhoneInput($event)"
                     >
                 </label>
                 <div *ngIf="phone.invalid && phone.touched">
@@ -172,7 +172,7 @@
             </div>
             <div class="col-6">
                 <div class="submitButton defaultButton">
-                    <button type="submit" [disabled]="!newCompanyForm.valid">Adicionar</button>
+                    <button type="submit">Adicionar</button>
                 </div>
             </div>
         </div>
