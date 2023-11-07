@@ -5,6 +5,10 @@
     --golden-yellow: #D1972C;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 main {
     height: calc(100vh - 131px);
 }
