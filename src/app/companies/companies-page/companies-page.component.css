@@ -1,14 +1,15 @@
-table {
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto;
+.form-group {
+    padding-top: 100px;
 }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
+.companycontent {
+    margin-top: 20px;
 }
 
-table p {
-    margin: 0;
+.filterButton a,
+.filterButton button{
+    background-color: var(--golden-yellow);
+    border: 1px solid #6D6D6D;
+    color: #000;
+    height: 70px;
 }
