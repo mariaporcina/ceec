@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 
-import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -42,13 +40,11 @@ import { CompanyFormComponent } from './companies/company-form/company-form.comp
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgxMaskDirective,
-    NgxMaskPipe,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [provideNgxMask()],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
