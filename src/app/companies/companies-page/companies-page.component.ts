@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CompanyService } from 'src/app/services/empresa.service';
+import { CompanyService } from 'src/app/services/company.service';
 import { lastValueFrom } from 'rxjs';
 
 @Component({
@@ -20,16 +20,26 @@ export class CompaniesPageComponent implements OnInit {
   async loadCompanies() {
     try {
       const companies = await lastValueFrom(this.companyService.getCompanies());
-      this.companies = companies as any[]; // Ajuste o tipo conforme a estrutura dos dados
+      this.sortCompaniesByName(companies);
+      if (this.searchTerm.trim() !== '') {
+        this.companies = companies.filter(company => 
+          company.businessName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          company.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          company.cnpj.includes(this.searchTerm) ||
+          company.phone.includes(this.searchTerm) ||
+          company.city.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          company.state.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          (company.status ? 'Ativa' : 'Inativa').toLowerCase().includes(this.searchTerm.toLowerCase())
+        );
+      } else {
+        this.sortCompaniesByName(this.companies);
+      }
     } catch (error) {
       console.error('Erro ao carregar empresas', error);
     }
   }
 
-  filterCompanies(): any[] {
-    const term = this.searchTerm.toLowerCase();
-    return this.companies.filter((company) =>
-      company.businessName.toLowerCase().includes(term)
-    );
+  sortCompaniesByName(companies: any[]) {
+    this.companies = companies.sort((a, b) => a.businessName.localeCompare(b.businessName));
   }
 }

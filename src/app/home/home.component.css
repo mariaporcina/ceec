@@ -13,3 +13,11 @@ a[routerLink] {
 .align-right {
     margin-left: auto;
 }
+
+@media (min-width: 992px) {
+    .card {
+        height: 120%;
+        width: 50%;
+        margin-top: 50px;
+    }
+}

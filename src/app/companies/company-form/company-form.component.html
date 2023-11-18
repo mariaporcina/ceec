@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form [formGroup]="newCompanyForm" (ngSubmit)="submit()" #formDir="ngForm" class="offset-2">
+    <form [formGroup]="newCompanyForm" (ngSubmit)="submit()" #formDir="ngForm" class="offset-lg-2 offset-xl-2">
         <div class="form-container">
             <span class="form-message">Campos marcados com asterísco são obrigatórios. (*)</span>
 
@@ -61,7 +61,7 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-xl-4 col-lg-4">
                     <label for="cnpj">
                         <p>CNPJ *</p>
                         <input
@@ -82,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-6 col-xl-4 col-lg-4">
                     <label for="email">
                         <p>Endereço de E-mail *</p>
                         <input
@@ -101,7 +101,7 @@
                         <p *ngIf="email.errors?.['pattern']" class="form-message form-warning">Endereço de email inválido</p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-xl-4 col-lg-4">
                     <label for="phone">
                         <p>Telefone (com DDD) *</p>
                         <input

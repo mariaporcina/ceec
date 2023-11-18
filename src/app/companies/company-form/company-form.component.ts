@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CompanyService } from 'src/app/services/empresa.service';
+import { CompanyService } from 'src/app/services/company.service';
 
 @Component({
   selector: 'app-company-form',
@@ -10,6 +10,7 @@ import { CompanyService } from 'src/app/services/empresa.service';
 
 export class CompanyFormComponent implements OnInit {
   @Input() btnText!: string;
+  @Input() companyDetails: any;
 
   newCompanyForm!: FormGroup;
   formWarning: string = '';
