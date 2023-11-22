@@ -1,24 +1,24 @@
 footer {
-    width: 100%;
     max-width: 100%;
-    margin: 0 0 0 auto;
+    padding-top: 70px;
 }
-footer .row {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-}
+
 footer p {
     font-weight: 500;
-    margin: 0;
 }
 footer p strong{
     color: #D1972C;
     font-weight: 500;
 }
 
-@media screen and (min-width: 768px) {
-    footer {
-        max-width: calc(100% - 300px);
+@media (min-width: 992px) {
+    footer p {
+        padding-top: 15px;
     }
 }
+
+@media (max-width: 991px) {
+    footer p {
+        padding-top: 10px;
+    }
+} 

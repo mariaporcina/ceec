@@ -1,0 +1,143 @@
+<div class="container-fluid">
+    <form [formGroup]="newUserForm" (ngSubmit)="submit()" #formDir="ngForm" class="offset-lg-2 offset-xl-2">
+        <div class="form-container">
+            <span class="form-message">Campos marcados com asterísco são obrigatórios. (*)</span>
+
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-8">
+                    <label for="userName">
+                        <p>Nome Completo *</p>
+                        <input
+                            formControlName="userName"
+                            type="text"
+                            name="userName"
+                            id="userName"
+                            placeholder="Gustavo"
+                            required
+                            minlength="2"
+                        >
+                    </label>
+                    <div *ngIf="userName.invalid && userName.touched">
+                        <p *ngIf="userName.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-xl-4">
+                    <label for="cpf">
+                        <p>CPF *</p>
+                        <input
+                            formControlName="cpf"
+                            type="text"
+                            name="cpf"
+                            id="cpf"
+                            placeholder="000.000.000-00"
+                            required
+                            minlength="14"
+                            maxlength="14"
+                            (input)="onCpfInput($event)"
+                        >
+                    </label>
+                    <div *ngIf="cpf.invalid && cpf.touched">
+                        <p *ngIf="cpf.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="cpf.errors?.['pattern']" class="form-message form-warning">CPF inválido</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-8">
+                    <label for="email">
+                        <p>Endereço de E-mail *</p>
+                        <input
+                            formControlName="email"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="gustavo@gmail.com"
+                            required
+                            minlength="5"
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                        >
+                    </label>
+                    <div *ngIf="email.invalid && email.touched">
+                        <p *ngIf="email.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="email.errors?.['pattern']" class="form-message form-warning">Endereço de email inválido</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-xl-4">
+                    <label for="phone">
+                        <p>Telefone (com DDD) *</p>
+                        <input
+                            formControlName="phone"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(11) 9 9999-9999"
+                            required
+                            minlength="16"
+                            maxlength="16"
+                            (input)="onPhoneInput($event)"
+                        >
+                    </label>
+                    <div *ngIf="phone.invalid && phone.touched">
+                        <p *ngIf="phone.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="phone.errors?.['pattern']" class="form-message form-warning">Número de telefone inválido</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <label for="password">
+                        <p>Senha *</p>
+                        <input
+                            formControlName="password"
+                            type="password"
+                            name="password"
+                            id="password"
+                            required
+                            minlength="8"
+                            maxlength="16"
+                        >
+                    </label>
+                    <div *ngIf="password.invalid && password.touched">
+                        <p *ngIf="password.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="confPassword">
+                        <p>Confirmar Senha *</p>
+                        <input
+                            formControlName="confPassword"
+                            type="password"
+                            name="confPassword"
+                            id="confPassword"
+                            required
+                            minlength="8"
+                            maxlength="16"
+                            (input)="checkPasswordMatch()"
+                        >
+                    </label>
+                    <div *ngIf="confPassword.invalid && confPassword.touched">
+                        <p *ngIf="confPassword.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="passwordMatch === false" class="form-message form-warning">As senhas não coincidem</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="goBackButton defaultButton">
+                        <a href="#">Retornar</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="submitButton defaultButton">
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
