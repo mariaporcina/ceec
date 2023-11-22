@@ -138,6 +138,7 @@
                             minlength="9"
                             maxlength="9"
                             pattern="^[0-9]{5}-[0-9]{3}$"
+                            (input)="onCepInput($event)"
                         >
                     </label>
                     <div *ngIf="cep.invalid && cep.touched">
@@ -148,7 +149,7 @@
                 <div class="col-lg-4 col-xl-4">
                     <label for="city">
                         <p>Cidade *</p>
-                        <input type="text" name="city" id="city" formControlName="city" placeholder="São Paulo" required>
+                        <input type="text" name="city" id="city" formControlName="city" placeholder="São Paulo" [disabled]="true" required>
                     </label>
                     <div *ngIf="city.invalid && city.touched">
                         <p *ngIf="city.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
@@ -157,7 +158,7 @@
                 <div class="col-lg-4 col-xl-4">
                     <label for="state">
                         <p>Estado *</p>
-                        <input type="text" name="state" id="state" formControlName="state" placeholder="São Paulo" required>
+                        <input type="text" name="state" id="state" formControlName="state" placeholder="São Paulo" [disabled]="true" required>
                     </label>
                     <div *ngIf="state.invalid && state.touched">
                         <p *ngIf="state.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>

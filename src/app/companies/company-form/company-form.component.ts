@@ -37,6 +37,25 @@ export class CompanyFormComponent implements OnInit {
     this.newCompanyForm.get('phone')?.setValue(formattedPhone, { emitEvent: false });
   }
 
+  async onCepInput(event: any) {
+    const inputCep = event.target.value;
+
+    if(inputCep.length === 9) {
+      const cleanCep = inputCep.replace(/-/, '');
+      const url = new URL(`https://viacep.com.br/ws/${cleanCep}/json/`);
+      
+      try {
+        const response = await fetch(url);
+        const result = await response.json();
+
+        this.newCompanyForm.get('city')?.setValue(result.localidade, { emitEvent: false });
+        this.newCompanyForm.get('state')?.setValue(result.uf, { emitEvent: false });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
+
   ngOnInit(): void {
     this.newCompanyForm = new FormGroup({
       businessName: new FormControl(''),
