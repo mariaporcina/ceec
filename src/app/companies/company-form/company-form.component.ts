@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
 import { CompanyService } from 'src/app/services/company.service';
+import { Company } from 'src/app/model/company';
 
 @Component({
   selector: 'app-company-form',
@@ -10,10 +12,15 @@ import { CompanyService } from 'src/app/services/company.service';
 
 export class CompanyFormComponent implements OnInit {
   @Input() btnText!: string;
-  @Input() companyDetails: any;
+  @Input() companyDetails: Company = new Company('', '', '', '', '', '', '', '');
 
   newCompanyForm!: FormGroup;
   formWarning: string = '';
+
+  statusOptions = [
+    {status: true, value: 'Ativa'},
+    {status: false, value: 'Inativa'}
+  ];
 
   constructor(private companyService: CompanyService) { }
 
@@ -68,6 +75,18 @@ export class CompanyFormComponent implements OnInit {
       email: new FormControl(''),
       status: new FormControl(''),
     });
+
+    console.log(this.companyDetails);
+
+    this.setStatus();
+  }
+
+  setStatus() {
+    setTimeout(() => {
+      if(this.companyDetails.businessName.length > 0) {
+        this.status.patchValue(this.companyDetails.status);
+      }
+    }, 100);
   }
 
   get businessName() {
