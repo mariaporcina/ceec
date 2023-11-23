@@ -1,21 +1,23 @@
 export class Company {
     id?: string;
-    corporateName: string;
+    businessName: string;
     name: string;
     cnpj: string;
     email: string;
-    postalCode: string;
+    phone: string;
+    cep: string;
     city: string;
     state: string;
     status?: boolean;
 
-    constructor(corporateName: string, name: string, cnpj: string, email: string, postalCode: string, city: string, state: string, status: boolean = true) {
+    constructor(businessName: string, name: string, cnpj: string, email: string, phone: string, cep: string, city: string, state: string, status: boolean = true) {
         this.id = String(Math.round(Math.random() * 1000));
-        this.corporateName = corporateName;
+        this.businessName = businessName;
         this.name = name;
         this.cnpj = cnpj;
         this.email = email;
-        this.postalCode = postalCode;
+        this.phone = phone;
+        this.cep = cep;
         this.city = city;
         this.state = state;
         this.status = status;

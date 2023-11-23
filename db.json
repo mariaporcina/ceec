@@ -119,6 +119,30 @@
       "email": "jonhcena.guga@gmail.com",
       "status": "false",
       "id": 10
+    },
+    {
+      "businessName": "nova empresa teste",
+      "cnpj": "00.000.000/0000-00",
+      "name": "empresa",
+      "phone": "(00) 0 0000-0000",
+      "cep": "81070-050",
+      "city": "Curitiba",
+      "state": "PR",
+      "email": "contato@empresa.com",
+      "status": "true",
+      "id": 11
+    },
+    {
+      "businessName": "empresa inativa",
+      "cnpj": "00.000.000/0000-00",
+      "name": "empresa",
+      "phone": "(00) 0 0000-0000",
+      "cep": "81070-050",
+      "city": "Curitiba",
+      "state": "PR",
+      "email": "contato@empresa.com",
+      "status": "false",
+      "id": 12
     }
   ],
   "users": [
