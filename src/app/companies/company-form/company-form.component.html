@@ -15,7 +15,6 @@
                             placeholder="Sport Clube Corinthians"
                             required
                             minlength="3"
-                            [value]="(companyDetails.businessName)"
                         >
                     </label>
                     <div *ngIf="businessName.invalid && businessName.touched">
@@ -28,7 +27,8 @@
                     <label for="status">
                         <p>Ativa? *</p>
                         <select formControlName="status" name="status" id="status" required>
-                            <option *ngFor="let option of statusOptions" [value]="option.status">{{ option.value }}</option>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
                         </select>
 
                     </label>
@@ -51,7 +51,6 @@
                             placeholder="Corinthians"
                             required
                             minlength="3"
-                            [value]="(companyDetails.name)"
                         >
 
                     </label>
@@ -75,7 +74,6 @@
                             minlength="18"
                             maxlength="18"
                             (input)="onCnpjInput($event)"
-                            [value]="(companyDetails.cnpj)"
                         >
                     </label>
                     <div *ngIf="cnpj.invalid && cnpj.touched">
@@ -96,7 +94,6 @@
                             required
                             minlength="5"
                             pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                            [value]="(companyDetails.email)"
                         >
                     </label>
                     <div *ngIf="email.invalid && email.touched">
@@ -117,7 +114,6 @@
                             minlength="16"
                             maxlength="16"
                             (input)="onPhoneInput($event)"
-                            [value]="(companyDetails.phone)"
                         >
                     </label>
                     <div *ngIf="phone.invalid && phone.touched">
@@ -143,7 +139,6 @@
                             maxlength="9"
                             pattern="^[0-9]{5}-[0-9]{3}$"
                             (input)="onCepInput($event)"
-                            [value]="(companyDetails.cep)"
                         >
                     </label>
                     <div *ngIf="cep.invalid && cep.touched">
@@ -154,15 +149,7 @@
                 <div class="col-lg-4 col-xl-4">
                     <label for="city">
                         <p>Cidade *</p>
-                        <input
-                            type="text"
-                            name="city"
-                            id="city" 
-                            ormControlName="city"
-                            placeholder="São Paulo"
-                            required
-                            [value]="(companyDetails.city)"
-                        >
+                        <input type="text" name="city" id="city" formControlName="city" placeholder="São Paulo" [disabled]="true" required>
                     </label>
                     <div *ngIf="city.invalid && city.touched">
                         <p *ngIf="city.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
@@ -171,15 +158,7 @@
                 <div class="col-lg-4 col-xl-4">
                     <label for="state">
                         <p>Estado *</p>
-                        <input
-                            type="text"
-                            name="state"
-                            id="state" 
-                            formControlName="state"
-                            placeholder="São Paulo"
-                            required
-                            [value]="(companyDetails.state)"
-                        >
+                        <input type="text" name="state" id="state" formControlName="state" placeholder="São Paulo" [disabled]="true" required>
                     </label>
                     <div *ngIf="state.invalid && state.touched">
                         <p *ngIf="state.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
