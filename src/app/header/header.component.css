@@ -15,7 +15,7 @@ header nav .signOut {
     padding-right: 45px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 991px) {
     header nav .signOut {
         padding-right: 0;
     }   
