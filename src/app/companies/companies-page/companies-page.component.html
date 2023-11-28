@@ -31,20 +31,20 @@
             <div class="col-12">
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>Razão Social<br>Nome Fantasia</th>
-                            <th>CNPJ<br>Telefone</th>
-                            <th class="d-none d-md-table-cell">Cidade<br>Estado</th>
-                            <th class="d-none d-md-table-cell">Status</th>
-                        </tr>
+                    <tr>
+                        <th>Razão Social<br>Nome Fantasia</th>
+                        <th>CNPJ<br>Telefone</th>
+                        <th class="d-none d-md-table-cell">Cidade<br>Estado</th>
+                        <th class="d-none d-md-table-cell">Status</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let company of companies">
-                            <td><a routerLink="/empresas/{{ company.id }}">{{ company.businessName }}<br>{{ company.name }}</a></td>
-                            <td><a routerLink="/empresas/{{ company.id }}">{{ company.cnpj }}<br>{{ company.phone }}</a></td>
-                            <td class="d-none d-md-table-cell">{{ company.city }}<br>{{ company.state }}</td>
-                            <td class="d-none d-md-table-cell">{{ company.status ? 'Ativa' : 'Inativa' }}</td>
-                        </tr>
+                    <tr *ngFor="let company of companies">
+                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.businessName }}<br>{{ company.name }}</a></td>
+                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.cnpj }}<br>{{ company.phone }}</a></td>
+                        <td class="d-none d-md-table-cell">{{ company.city }}<br>{{ company.state }}</td>
+                        <td class="d-none d-md-table-cell">{{ company.status ? 'Ativa' : 'Inativa' }}</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>

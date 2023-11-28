@@ -1,10 +1,8 @@
 import { lastValueFrom } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { CompanyService } from 'src/app/services/company.service';
-import { Company } from 'src/app/model/company';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-company-page',
@@ -13,7 +11,7 @@ import { Company } from 'src/app/model/company';
 })
 export class CompanyPageComponent implements OnInit {
   companyId: string = '';
-  companyDetails: Company = new Company('', '', '', '', '', '', '', '');
+  companyDetails: any;
   companyForm: FormGroup;
 
   constructor(
@@ -75,6 +73,7 @@ export class CompanyPageComponent implements OnInit {
         cep: this.companyDetails.cep,
         city: this.companyDetails.city,
         state: this.companyDetails.state
+
       });
     } catch (error) {
       console.error('Erro ao carregar detalhes da empresa', error);
