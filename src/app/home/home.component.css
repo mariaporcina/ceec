@@ -21,3 +21,19 @@ a[routerLink] {
         margin-top: 50px;
     }
 }
+
+@media (min-width: 1601px) {
+    .card {
+        height: 120%;
+        width: 50%;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+    .card {
+        height: 90%;
+        width: 50%;
+        margin-top: 30px;
+    }
+}

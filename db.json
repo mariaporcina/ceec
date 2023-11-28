@@ -37,7 +37,7 @@
       "id": 3
     },
     {
-      "businessName": "Aaaaa Mariaaaa OOOOOOOO",
+      "businessName": "Aaaaa Mariaaaa",
       "status": "true",
       "name": "Corinthians",
       "cnpj": "01.000.000/0001-00",
@@ -119,6 +119,18 @@
       "email": "jonhcena.guga@gmail.com",
       "status": "false",
       "id": 10
+    },
+    {
+      "businessName": "empresa da maria",
+      "cnpj": "00.000.000/0000-00",
+      "name": "empresa",
+      "phone": "(00) 0 0000-0000",
+      "cep": "85070-050",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "contato@empresa.com",
+      "status": "false",
+      "id": 11
     }
   ],
   "users": [
