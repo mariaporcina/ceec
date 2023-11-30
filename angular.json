@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "comp1contabilist": {
+    "contabilist": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/comp1contabilist",
+            "outputPath": "dist/contabilist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "comp1contabilist:build:production"
+              "browserTarget": "contabilist:build:production"
             },
             "development": {
-              "browserTarget": "comp1contabilist:build:development"
+              "browserTarget": "contabilist:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "comp1contabilist:build"
+            "browserTarget": "contabilist:build"
           }
         },
         "test": {
@@ -91,11 +91,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "5247db43-b988-4999-a024-6f3a2f4675cb"
+    "analytics": "5247db43-b988-4999-a024-6f3a2f4675cb",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
