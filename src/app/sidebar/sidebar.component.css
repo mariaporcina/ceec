@@ -1,0 +1,72 @@
+#activeMenu .sidebar {
+  left: 0;
+}
+
+.sidebar {
+  background: #000;
+  transition: all 0.3s;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  padding-top: 65px;
+}
+
+.buttonMenu {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: normal;position: absolute;
+  top: 16px;
+  right: 12px;
+  z-index: 1;
+  position: fixed;
+}
+
+.sidebar_nav {
+  
+}
+
+.sidebar li {
+  border-bottom: 1px solid #D1972C;
+}
+
+.sidebar li.active{
+  background: #eee;
+  border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover {
+  color: #000;
+}
+
+.sidebar li a {
+  color: #D1972C;
+}
+
+.sidebar li a i {
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 1.6rem;
+  width: 28px;
+}
+
+.sidebar li a font {
+  font-size: 1.2rem;
+}
+
+.sidebar__logo {}
+
+.sidebar__logo img {
+  max-width: 150px;
+}
+
+@media screen and (min-width: 991px){
+  .sidebar {
+    left: 0;
+  }
+  
+  .buttonMenu {
+    display: none;
+  }
+}

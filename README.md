@@ -7,7 +7,7 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 ## Endereço de Deploy - GitHub Pages
 
-~ inserir link de deploy, assim que disponível ~
+[https://mariaporcina.github.io/contabilist/](https://mariaporcina.github.io/contabilist/)
 
 ## Protótipo
 

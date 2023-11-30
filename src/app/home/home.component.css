@@ -1,0 +1,39 @@
+.container-fluid {
+    padding-top: 100px;
+}
+
+.gold {
+    color: #D1972C;
+}
+
+a[routerLink] {
+    text-decoration: none;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .card {
+        height: 120%;
+        width: 50%;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1601px) {
+    .card {
+        height: 120%;
+        width: 50%;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+    .card {
+        height: 90%;
+        width: 50%;
+        margin-top: 30px;
+    }
+}

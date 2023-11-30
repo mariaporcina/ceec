@@ -1,0 +1,183 @@
+<div class="container-fluid">
+    <form [formGroup]="newCompanyForm" (ngSubmit)="submit()" #formDir="ngForm" class="offset-lg-2 offset-xl-2">
+        <div class="form-container">
+            <span class="form-message">Campos marcados com asterísco são obrigatórios. (*)</span>
+
+            <div class="row">
+                <div class="col-8">
+                    <label for="businessName">
+                        <p>Razão Social *</p>
+                        <input
+                            formControlName="businessName"
+                            type="text"
+                            name="businessName"
+                            id="businessName"
+                            placeholder="Sport Clube Corinthians"
+                            required
+                            minlength="3"
+                        >
+                    </label>
+                    <div *ngIf="businessName.invalid && businessName.touched">
+                        <p *ngIf="businessName.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+
+
+                <div class="col-4">
+                    <label for="status">
+                        <p>Ativa? *</p>
+                        <select formControlName="status" name="status" id="status" required>
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+
+                    </label>
+                    <div *ngIf="status.invalid && status.touched">
+                        <p *ngIf="status.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="name">
+                        <p>Nome Fantasia *</p>
+                        <input
+                            formControlName="name"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Corinthians"
+                            required
+                            minlength="3"
+                        >
+
+                    </label>
+                    <div *ngIf="name.invalid && name.touched">
+                        <p *ngIf="name.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-xl-4 col-lg-4">
+                    <label for="cnpj">
+                        <p>CNPJ *</p>
+                        <input
+                            formControlName="cnpj"
+                            type="text"
+                            name="cnpj"
+                            id="cnpj"
+                            placeholder="00.000.000/0000-00"
+                            required
+                            minlength="18"
+                            maxlength="18"
+                            (input)="onCnpjInput($event)"
+                        >
+                    </label>
+                    <div *ngIf="cnpj.invalid && cnpj.touched">
+                        <p *ngIf="cnpj.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="cnpj.errors?.['pattern']" class="form-message form-warning">CNPJ inválido</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-xl-4 col-lg-4">
+                    <label for="email">
+                        <p>Endereço de E-mail *</p>
+                        <input
+                            formControlName="email"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="corinthians@gmail.com"
+                            required
+                            minlength="5"
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                        >
+                    </label>
+                    <div *ngIf="email.invalid && email.touched">
+                        <p *ngIf="email.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="email.errors?.['pattern']" class="form-message form-warning">Endereço de email inválido</p>
+                    </div>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4">
+                    <label for="phone">
+                        <p>Telefone (com DDD) *</p>
+                        <input
+                            formControlName="phone"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(11) 9 9999-9999"
+                            required
+                            minlength="16"
+                            maxlength="16"
+                            (input)="onPhoneInput($event)"
+                        >
+                    </label>
+                    <div *ngIf="phone.invalid && phone.touched">
+                        <p *ngIf="phone.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="phone.errors?.['pattern']" class="form-message form-warning">Número de telefone inválido</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-xl-4">
+                    <label for="cep">
+                        <p>CEP *</p>
+                        <input
+                            formControlName="cep"
+                            type="text"
+                            name="cep"
+                            id="cep"
+                            placeholder="80000-000"
+                            required
+                            minlength="9"
+                            maxlength="9"
+                            pattern="^[0-9]{5}-[0-9]{3}$"
+                            (input)="onCepInput($event)"
+                        >
+                    </label>
+                    <div *ngIf="cep.invalid && cep.touched">
+                        <p *ngIf="cep.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                        <p *ngIf="cep.errors?.['pattern']" class="form-message form-warning">CEP inválido</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <label for="city">
+                        <p>Cidade *</p>
+                        <input type="text" name="city" id="city" formControlName="city" placeholder="São Paulo" [disabled]="true" required>
+                    </label>
+                    <div *ngIf="city.invalid && city.touched">
+                        <p *ngIf="city.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <label for="state">
+                        <p>Estado *</p>
+                        <input type="text" name="state" id="state" formControlName="state" placeholder="São Paulo" [disabled]="true" required>
+                    </label>
+                    <div *ngIf="state.invalid && state.touched">
+                        <p *ngIf="state.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="goBackButton defaultButton">
+                        <a href="#">Retornar</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="submitButton defaultButton">
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

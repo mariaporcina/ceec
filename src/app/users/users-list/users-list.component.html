@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row offset-lg-2 offset-xl-2 form-group">
+        <div class="col-12 col-xl-4 col-lg-4">
+            <input
+            type="text"
+            class="form-control"
+            placeholder="&#xf002; PESQUISAR"
+            [(ngModel)]="searchTerm"
+            (input)="loadUsers()"
+            />
+        </div>
+        <div class="col-6 col-xl-2 col-lg-2 d-flex justify-content-center">
+            <div class="btn filter">
+                <a routerLink="" class="d-flex align-items-center justify-content-center">
+                    <i class="far fa-search fa-3x" style="color: #000;"></i>
+                    <span class="text-center fs-3">+Filtros</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-lg-6 col-xl-6 d-flex justify-content-center">
+            <div class="btn search">
+                <a routerLink="/usuarios/novo" class="d-flex align-items-center justify-content-center">
+                    <i class="far fa-search fa-3x" style="color: #000;"></i>
+                    <span class="text-center fs-3"> Novo Usuário</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="companycontent">
+        <div class="row offset-lg-2 offset-xl-2">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th class="d-none d-md-table-cell">E-mail</th>
+                        <th class="d-none d-md-table-cell">Telefone</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let user of users">
+                        <td><a routerLink="/usuarios/{{ user.id }}">{{ user.userName }}</a></td>
+                        <td>{{ user.cpf }}</td>
+                        <td class="d-none d-md-table-cell">{{ user.email }}
+                        <td class="d-none d-md-table-cell">{{ user.phone }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+.form-group {
+    padding-top: 100px;
+}
+
+.companycontent {
+    margin-top: 20px;
+}
+
+.form-control {
+    height: 100%;
+    border: 1px solid #6D6D6D;
+}
+
+a {
+    text-decoration: none;
+    color: #D1972C;
+}
+
+.filter {
+    background-color: var(--golden-yellow);
+    border: 1px solid #6D6D6D;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+span {
+    color: black;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+td {
+    color: #D1972C;
+    font-weight: bold;
+}
+
+.search {
+    background-color: var(--golden-yellow);
+    border: 1px solid #6D6D6D;
+    color: #000;
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+    .search {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .search {
+        width: 100%;
+        height: 100%;
+    }
+}

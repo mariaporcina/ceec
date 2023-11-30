@@ -1,0 +1,174 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "businessName": "Nome da Empresa 1",
+      "cnpj": "00.000.000/0000-00",
+      "name": "Nome Fantasia 1",
+      "phone": "(11) 9 9999-9999",
+      "cep": "80000-000",
+      "city": "São Paulo",
+      "state": "São Paulo",
+      "email": "empresa1@gmail.com",
+      "status": "true"
+    },
+    {
+      "businessName": "Manchester",
+      "status": "true",
+      "name": "Corinthians",
+      "cnpj": "01.000.000/0001-00",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "id": 2
+    },
+    {
+      "businessName": "Santos",
+      "status": "true",
+      "name": "Corinthians",
+      "cnpj": "01.000.000/0001-00",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "id": 3
+    },
+    {
+      "businessName": "Aaaaa Mariaaaa",
+      "status": "true",
+      "name": "Corinthians",
+      "cnpj": "01.000.000/0001-00",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "id": 4
+    },
+    {
+      "businessName": "dsfgsdfgsdf",
+      "cnpj": "01.000.000/0001-00",
+      "name": "Corinthians",
+      "phone": "(42) 9 9824-1720",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 5
+    },
+    {
+      "businessName": "VASCO",
+      "cnpj": "00.000.000/0000-00",
+      "name": "Vasco da Gama",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Rio de Janeiro",
+      "email": "bbbbb@gmail.com",
+      "status": "false",
+      "id": 6
+    },
+    {
+      "businessName": "Maria",
+      "status": "false",
+      "name": "Flamengo da gama de regatas football club",
+      "cnpj": "11.111.111/1111-11",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "São Paulo",
+      "state": "Bahia",
+      "id": 7
+    },
+    {
+      "businessName": "Pedro",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Vasco da Gama",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "SDFGasdfg",
+      "state": "Paraná",
+      "email": "afgafdg@gmail.com",
+      "status": "false",
+      "id": 8
+    },
+    {
+      "businessName": "Juventude",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Vasco da Gama",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "false",
+      "id": 9
+    },
+    {
+      "businessName": "Juventude",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Vasco da Gama",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "Paraná",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "false",
+      "id": 10
+    },
+    {
+      "businessName": "empresa da maria",
+      "cnpj": "00.000.000/0000-00",
+      "name": "empresa",
+      "phone": "(00) 0 0000-0000",
+      "cep": "85070-050",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "contato@empresa.com",
+      "status": "false",
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "Gustavo",
+      "cpf": "000.000.000-00",
+      "email": "empresa1@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "gustavo1",
+      "confPassword": "gustavo1"
+    },
+    {
+      "userName": "Gustavo",
+      "cpf": "000.000.000-00",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "gustavo2",
+      "confPassword": "gustavo2",
+      "id": 2
+    },
+    {
+      "userName": "Maria Porcina Flamengo da Gama",
+      "cpf": "123.456.789-10",
+      "email": "bbbbb@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "Maria@maria",
+      "confPassword": "Maria@maria",
+      "id": 3
+    },
+    {
+      "userName": "Mariaaa",
+      "cpf": "111.111.111-11",
+      "email": "asdasdsA@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "maria12345",
+      "confPassword": "maria12345",
+      "id": 4
+    }
+  ]
+}

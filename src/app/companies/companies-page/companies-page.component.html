@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row offset-lg-2 offset-xl-2 form-group">
+        <div class="col-12 col-xl-4 col-lg-4">
+            <input
+            type="text"
+            class="form-control"
+            placeholder="&#xf002; PESQUISAR"
+            [(ngModel)]="searchTerm"
+            (input)="loadCompanies()"
+            />
+        </div>
+        <div class="col-6 col-xl-2 col-lg-2 d-flex justify-content-center">
+            <div class="btn filter">
+                <a routerLink="/empresas/nova" class="d-flex align-items-center justify-content-center">
+                    <i class="far fa-search fa-3x" style="color: #000;"></i>
+                    <span class="text-center fs-3">+Filtros</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-lg-6 col-xl-6 d-flex justify-content-center">
+            <div class="btn search">
+                <a routerLink="/empresas/nova" class="d-flex align-items-center justify-content-center">
+                    <i class="far fa-search fa-3x" style="color: #000;"></i>
+                    <span class="text-center fs-3"> Nova Empresa</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="companycontent">
+        <div class="row offset-lg-2 offset-xl-2">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Razão Social<br>Nome Fantasia</th>
+                        <th>CNPJ<br>Telefone</th>
+                        <th class="d-none d-md-table-cell">Cidade<br>Estado</th>
+                        <th class="d-none d-md-table-cell">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let company of companies">
+                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.businessName }}<br>{{ company.name }}</a></td>
+                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.cnpj }}<br>{{ company.phone }}</a></td>
+                        <td class="d-none d-md-table-cell">{{ company.city }}<br>{{ company.state }}</td>
+                        <td class="d-none d-md-table-cell">{{ company.status ? 'Ativa' : 'Inativa' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
