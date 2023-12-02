@@ -37,7 +37,7 @@
       "id": 3
     },
     {
-      "businessName": "Aaaaa Mariaaaa",
+      "businessName": "Aaaaa A",
       "status": "true",
       "name": "Corinthians",
       "cnpj": "01.000.000/0001-00",
@@ -131,6 +131,30 @@
       "email": "contato@empresa.com",
       "status": "false",
       "id": 11
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 12
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 13
     }
   ],
   "users": [

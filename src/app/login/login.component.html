@@ -1,5 +1,34 @@
-<section class="sectionCommon sectionUsers">
-    <div class="container-fluid">
-        <p>login works!</p>
+<div class="login row">
+    <div class="loginBg col-8 d-none d-md-flex d-flex align-items-center justify-content-center">
+        <figure class="sidebar__logo">
+            <img class="w-100" src="assets/resources/images/logo.svg" alt="Contabilist logo">
+        </figure>
     </div>
-</section>
+    <div class="loginForm col-12 col-xl-4 col-lg-4 d-flex align-items-center justify-content-center flex-column">
+        <p class="h2"><strong>Login</strong></p>
+
+        <input
+            type="text"
+            name="userLogin"
+            id="userLogin"
+            placeholder="Nome de Usuário"
+            required
+            minlength="3"
+        >
+
+        <input
+            type="password"
+            name="userPassword"
+            id="userPassword"
+            placeholder="Senha"
+            required
+            minlength="3"
+        >
+
+        <div class="submitButton defaultButton">
+            <button type="submit">Entrar</button>
+        </div>
+
+        <p class="h6"><strong>Esqueci minha senha</strong></p>
+    </div>
+</div>
