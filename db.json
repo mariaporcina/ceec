@@ -193,6 +193,15 @@
       "password": "maria12345",
       "confPassword": "maria12345",
       "id": 4
+    },
+    {
+      "userName": "maria",
+      "cpf": "000.000.000-00",
+      "email": "maria@gmail.com",
+      "phone": "(99) 9 9999-9999",
+      "password": "12345678",
+      "confPassword": "12345678",
+      "id": 5
     }
   ]
 }

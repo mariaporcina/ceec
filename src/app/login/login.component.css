@@ -13,9 +13,9 @@
 
 input {
     display: block;
-    width: 90%;
-    padding: 5px;
-    border: 1px solid #f7f7f7;
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
     border-radius: 5px;
     height: 50px;
     background-color: #f7f7f7;
@@ -24,7 +24,6 @@ input {
 
 ::placeholder {
     color: #D1972C;
-    text-align: center;
     font-weight: bold;
 }
 
@@ -34,7 +33,7 @@ input {
     border: 1px solid #6D6D6D;
     width: 100%;
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
     padding: 12px 120px;
     line-height: initial;
@@ -43,6 +42,10 @@ input {
     margin-top: 95%;
 }
 
-.h6 {
-    margin-top: 10px;
+.defaultButton button[disabled] {
+    background-color: #ccc;
+}
+
+.loginForm .form-message.form-warning {
+    color: #d50f22;
 }
