@@ -1,5 +1,5 @@
 import { lastValueFrom } from 'rxjs';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CompanyService } from 'src/app/services/company.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -80,14 +80,21 @@ export class CompanyPageComponent implements OnInit {
     }
   }
 
+  async handleDeleteUser() {
+    try {
+      await lastValueFrom(this.companyService.deleteCompany(this.companyId));
+      this.router.navigate(['/empresas']);
+    } catch (error) {
+      console.error('Erro ao deletar usuário', error);
+    }
+  }
+
   async submit() {
     try {
       if (this.companyForm.valid) {
         const updatedCompanyData = this.companyForm.value;
         await lastValueFrom(this.companyService.updateCompany(this.companyId, updatedCompanyData));
         this.router.navigate(['/empresas']);
-      } else {
-
       }
     } catch (error) {
       console.error('Erro ao atualizar empresa', error);

@@ -1,5 +1,5 @@
 import { lastValueFrom } from 'rxjs';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -27,7 +27,7 @@ export class UserPageComponent implements OnInit {
       phone: ['', [Validators.required, Validators.minLength(16), Validators.maxLength(16)]],
       password: ['', [Validators.required]],
       confPassword: ['', [Validators.required]],
-  });
+    });
   }
 
   formatCpf(cpf: string) {
@@ -92,14 +92,21 @@ export class UserPageComponent implements OnInit {
     }
   }
 
+  async handleDeleteUser() {
+    try {
+      await lastValueFrom(this.userService.deleteUser(this.userId));
+      this.router.navigate(['/usuarios']);
+    } catch (error) {
+      console.error('Erro ao deletar usuário', error);
+    }
+  }
+
   async submit() {
     try {
       if (this.userForm.valid) {
         const updatedUserData = this.userForm.value;
         await lastValueFrom(this.userService.updateUser(this.userId, updatedUserData));
         this.router.navigate(['/usuarios']);
-      } else {
-
       }
     } catch (error) {
       console.error('Erro ao atualizar empresa', error);

@@ -1,1 +1,86 @@
-<p>my-user works!</p>
+<div class="container-fluid">
+    <form [formGroup]="userForm" (ngSubmit)="submit()" #formDir="ngForm" class="offset-lg-2 offset-xl-2">
+        <div class="form-container">
+            <span class="form-message">Campos marcados com asterísco são obrigatórios. (*)</span>
+
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-8">
+                    <label for="userName">
+                        <p>Nome Completo *</p>
+                        <input
+                            formControlName="userName"
+                            type="text"
+                            name="userName"
+                            id="userName"
+                            placeholder="Gustavo"
+                            required
+                            minlength="2"
+                        >
+                    </label>
+                </div>
+
+                <div class="col-12 col-lg-4 col-xl-4">
+                    <label for="cpf">
+                        <p>CPF *</p>
+                        <input
+                            formControlName="cpf"
+                            type="text"
+                            name="cpf"
+                            id="cpf"
+                            placeholder="000.000.000-00"
+                            required
+                            minlength="14"
+                            maxlength="14"
+                            (input)="onCpfInput($event)"
+                        >
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-8">
+                    <label for="email">
+                        <p>Endereço de E-mail *</p>
+                        <input
+                            formControlName="email"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="gustavo@gmail.com"
+                            required
+                            minlength="5"
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                        >
+                    </label>
+                </div>
+
+                <div class="col-12 col-lg-4 col-xl-4">
+                    <label for="phone">
+                        <p>Telefone (com DDD) *</p>
+                        <input
+                            formControlName="phone"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(11) 9 9999-9999"
+                            required
+                            minlength="16"
+                            maxlength="16"
+                            (input)="onPhoneInput($event)"
+                        >
+                    </label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                    <div class="submitButton defaultButton">
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
