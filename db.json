@@ -37,7 +37,7 @@
       "id": 3
     },
     {
-      "businessName": "Aaaaa Mariaaaa",
+      "businessName": "Aaaaa A",
       "status": "true",
       "name": "Corinthians",
       "cnpj": "01.000.000/0001-00",
@@ -131,6 +131,30 @@
       "email": "contato@empresa.com",
       "status": "false",
       "id": 11
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 12
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 13
     }
   ],
   "users": [
@@ -169,6 +193,24 @@
       "password": "maria12345",
       "confPassword": "maria12345",
       "id": 4
+    },
+    {
+      "userName": "maria",
+      "cpf": "000.000.000-00",
+      "email": "maria@gmail.com",
+      "phone": "(99) 9 9999-9999",
+      "password": "12345678",
+      "confPassword": "12345678",
+      "id": 5
+    },
+    {
+      "userName": "Hudson Carolino",
+      "cpf": "000.000.000-00",
+      "email": "hudson@gmail.com",
+      "phone": "(99) 9 9999-9999",
+      "password": "12345678",
+      "confPassword": "12345678",
+      "id": 6
     }
   ]
 }

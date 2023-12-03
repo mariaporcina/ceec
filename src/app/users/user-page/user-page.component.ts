@@ -61,7 +61,7 @@ export class UserPageComponent implements OnInit {
 
   async loadUserDetails() {
     try {
-      this.userDetails = await lastValueFrom(this.userService.getUserDetails(this.userId));
+      this.userDetails = await lastValueFrom(this.userService.getUserById(this.userId));
       this.userForm.patchValue({
         userName: this.userDetails.userName,
         cpf: this.userDetails.cpf,

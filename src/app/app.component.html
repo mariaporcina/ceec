@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header *ngIf="isLogged"></app-header>
 
 <main>
-    <app-sidebar></app-sidebar>
+    <app-sidebar *ngIf="isLogged"></app-sidebar>
     
     <router-outlet></router-outlet>
 </main>
 
-<app-footer></app-footer>
+<app-footer *ngIf="isLogged"></app-footer>
