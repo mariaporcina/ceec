@@ -202,6 +202,15 @@
       "password": "12345678",
       "confPassword": "12345678",
       "id": 5
+    },
+    {
+      "userName": "Hudson Carolino",
+      "cpf": "000.000.000-00",
+      "email": "hudson@gmail.com",
+      "phone": "(99) 9 9999-9999",
+      "password": "12345678",
+      "confPassword": "12345678",
+      "id": 6
     }
   ]
 }
