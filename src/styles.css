@@ -32,7 +32,7 @@ main .container-fluid {
     display: inline-block;
 }
 
-.goBackButton.defaultButton a {
+.goBackButton.defaultButton button {
     color: #d50f22;
     background-color: #f4f4f6;
     border-color: #d50f22;

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CompanyService } from 'src/app/services/company.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-company-form',
@@ -15,7 +16,7 @@ export class CompanyFormComponent implements OnInit {
   newCompanyForm!: FormGroup;
   formWarning: string = '';
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private companyService: CompanyService, private router: Router,) { }
 
   formatCnpj(cnpj: string) {
     cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
@@ -104,14 +105,12 @@ export class CompanyFormComponent implements OnInit {
       return;
     }
     this.formWarning = "";
-
+    this.router.navigate(['/empresas']);
     const companyData = this.newCompanyForm.value;
 
     try {
       const response = await this.companyService.addCompany(companyData);
       console.log('Empresa adicionada com sucesso', response);
-      //TODO
-      // Limpar o formulário
     } catch (error) {
       console.error('Erro ao adicionar empresa', error);
     }

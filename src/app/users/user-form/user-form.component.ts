@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-form',
@@ -13,7 +14,7 @@ export class UserFormComponent implements OnInit {
   newUserForm!: FormGroup;
   formWarning: string = '';
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router,) { }
 
   formatCpf(cpf: string) {
     cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
@@ -86,6 +87,7 @@ export class UserFormComponent implements OnInit {
       return;
     }
     
+    this.router.navigate(['/usuarios']);
     this.formWarning = "";
 
     const userData = this.newUserForm.value;
