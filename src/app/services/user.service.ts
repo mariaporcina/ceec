@@ -38,4 +38,9 @@ export class UserService {
     const url = `${this.apiUrl}/${userId}`;
     return this.http.put<any>(url, updatedData);
   }
+
+  deleteUser(userId: string): Observable<any> {
+    const url = `${this.apiUrl}/${userId}`;
+    return this.http.delete<any>(url);
+  }
 }
