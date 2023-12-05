@@ -24,13 +24,23 @@ export class UserService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  getUserDetails(userId: string): Observable<any> {
+  getUserById(userId: string): Observable<any> {
     const url = `${this.apiUrl}/${userId}`;
+    return this.http.get<any>(url);
+  }
+
+  getUserByEmail(userEmail: string | null): Observable<any> {
+    const url = `${this.apiUrl}/?email=${userEmail}`;
     return this.http.get<any>(url);
   }
 
   updateUser(userId: string, updatedData: any): Observable<any> {
     const url = `${this.apiUrl}/${userId}`;
     return this.http.put<any>(url, updatedData);
+  }
+
+  deleteUser(userId: string): Observable<any> {
+    const url = `${this.apiUrl}/${userId}`;
+    return this.http.delete<any>(url);
   }
 }

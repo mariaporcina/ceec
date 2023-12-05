@@ -20,11 +20,6 @@ main .container-fluid {
     margin: 0 0 0 auto;
 }
 
-.defaultButton {}
-
-.defaultButton a{}
-.defaultButton button{}
-
 .defaultButton a,
 .defaultButton button{
     background-color: var(--golden-yellow);
@@ -35,6 +30,12 @@ main .container-fluid {
     line-height: initial;
     border-radius: 5px;
     display: inline-block;
+}
+
+.goBackButton.defaultButton button {
+    color: #d50f22;
+    background-color: #f4f4f6;
+    border-color: #d50f22;
 }
 
 .submitButton {

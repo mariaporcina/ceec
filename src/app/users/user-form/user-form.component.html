@@ -99,6 +99,7 @@
                             required
                             minlength="8"
                             maxlength="16"
+                            placeholder="********"
                         >
                     </label>
                     <div *ngIf="password.invalid && password.touched">
@@ -117,6 +118,7 @@
                             minlength="8"
                             maxlength="16"
                             (input)="checkPasswordMatch()"
+                            placeholder="********"
                         >
                     </label>
                     <div *ngIf="confPassword.invalid && confPassword.touched">
@@ -128,8 +130,8 @@
 
             <div class="row">
                 <div class="col-6">
-                    <div class="goBackButton defaultButton">
-                        <a href="#">Retornar</a>
+                    <div class="clear defaultButton">
+                        <button (click)="clearForm()">Limpar</button>
                     </div>
                 </div>
                 <div class="col-6">

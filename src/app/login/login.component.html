@@ -1,5 +1,52 @@
-<section class="sectionCommon sectionUsers">
-    <div class="container-fluid">
-        <p>login works!</p>
+<div class="login row">
+    <div class="loginBg col-8 d-none d-md-flex d-flex align-items-center justify-content-center">
+        <figure class="sidebar__logo">
+            <img class="w-100" src="assets/resources/images/logo.svg" alt="Contabilist logo">
+        </figure>
     </div>
-</section>
+    <div class="loginForm col-12 col-xl-4 col-lg-4 d-flex align-items-center justify-content-center flex-column">
+        <p class="h2"><strong>Login</strong></p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="submit()" >
+            <input
+                formControlName="email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                required
+                minlength="5"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                (input)="handleFormChange()"
+            >
+
+            <div *ngIf="email.invalid && email.touched">
+                <p *ngIf="email.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+                <p *ngIf="email.errors?.['pattern']" class="form-message form-warning">Endereço de email inválido</p>
+            </div>
+
+            <input
+                formControlName="password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Senha"
+                required
+                minlength="8"
+                (input)="handleFormChange()"
+            >
+
+            <div *ngIf="password.invalid && password.touched">
+                <p *ngIf="password.errors?.['required']" class="form-message form-warning">Campo Obrigatório</p>
+            </div>
+
+            <div *ngIf="formWarning">
+                <p class="form-message form-warning">{{ formWarning }}</p>
+            </div>
+
+            <div class="submitButton defaultButton">
+                <button type="submit" [disabled]="disableButton">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
