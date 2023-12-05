@@ -68,6 +68,10 @@ export class UserFormComponent implements OnInit {
     return this.newUserForm.get('confPassword')!;
   }
 
+  clearForm() {
+    this.newUserForm.reset();
+  }
+
   checkPasswordMatch() {
     const password = this.newUserForm.get('password')?.value;
     const confPassword = this.newUserForm.get('confPassword')?.value;

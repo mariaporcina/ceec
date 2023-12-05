@@ -71,6 +71,10 @@ export class CompanyFormComponent implements OnInit {
     });
   }
 
+  clearForm() {
+    this.newCompanyForm.reset();
+  }
+  
   get businessName() {
     return this.newCompanyForm.get('businessName')!;
   }
