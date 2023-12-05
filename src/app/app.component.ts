@@ -8,7 +8,7 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'comp1contabilist';
+  title = 'contabilist';
   isLogged: boolean = false;
 
   constructor(private router: Router) {
