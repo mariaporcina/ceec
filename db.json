@@ -72,18 +72,6 @@
       "id": 2
     },
     {
-<<<<<<< Updated upstream
-      "userName": "Maria Porcina",
-      "cpf": "123.456.789-10",
-      "email": "bbbbb@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "Maria@maria",
-      "confPassword": "Maria@maria",
-      "id": 3
-    },
-    {
-=======
->>>>>>> Stashed changes
       "userName": "Hudson Carolino",
       "cpf": "000.000.000-00",
       "email": "hudson@gmail.com",
@@ -93,33 +81,6 @@
       "id": 6
     },
     {
-<<<<<<< Updated upstream
-      "userName": "Gustavo",
-      "cpf": "111.111.111-11",
-      "email": "jonhcena.guga@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "gustavo12",
-      "confPassword": "gustavo12",
-      "id": 7
-    },
-    {
-      "userName": "Maria Maria Maria",
-      "cpf": "111.111.111-11",
-      "email": "jonhcena.guga@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "gugsguga844",
-      "confPassword": "gugsguga844",
-      "id": 8
-    },
-    {
-      "userName": "Maria Porcina Flamengo da Gama",
-      "cpf": "111.111.111-11",
-      "email": "afgafdg@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "gugsguga81",
-      "confPassword": "gugsguga81",
-      "id": 9
-=======
       "userName": "Maria",
       "cpf": "000.000.000-00",
       "email": "maria@gmail.com",
@@ -127,7 +88,6 @@
       "password": "12345678",
       "confPassword": "12345678",
       "id": 7
->>>>>>> Stashed changes
     }
   ]
 }
