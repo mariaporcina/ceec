@@ -59,6 +59,18 @@
       "email": "afgafdg@gmail.com",
       "status": "true",
       "id": 11
+    },
+    {
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
+      "city": "Guarapuava",
+      "state": "PR",
+      "email": "jonhcena.guga@gmail.com",
+      "status": "true",
+      "id": 12
     }
   ],
   "users": [
@@ -115,6 +127,15 @@
       "password": "gugsguga81",
       "confPassword": "gugsguga81",
       "id": 9
+    },
+    {
+      "userName": "Gustavo",
+      "cpf": "111.111.111-11",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "abc12345678",
+      "confPassword": "abc12345678",
+      "id": 10
     }
   ]
 }
