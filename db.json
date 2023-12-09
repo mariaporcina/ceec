@@ -51,6 +51,15 @@
   ],
   "users": [
     {
+      "userName": "Gustavo",
+      "cpf": "111.111.111-11",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "gustavo2",
+      "confPassword": "gustavo2",
+      "id": 2
+    },
+    {
       "userName": "Hudson Carolino",
       "cpf": "000.000.000-00",
       "email": "hudson@gmail.com",
