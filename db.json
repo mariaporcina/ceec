@@ -3,38 +3,14 @@
     {
       "businessName": "Maria",
       "status": "false",
-      "name": "Flamengo da gama de regatas football club",
+      "name": "empresa da maria",
       "cnpj": "11.111.111/1111-11",
-      "email": "jonhcena.guga@gmail.com",
+      "email": "maria@gmail.com",
       "phone": "(42) 9 9839-9093",
       "cep": "85010-040",
       "city": "São Paulo",
       "state": "Bahia",
       "id": 7
-    },
-    {
-      "businessName": "Corinthians",
-      "cnpj": "01.000.000/0001-00",
-      "name": "Flamengo da gama de regatas football club",
-      "phone": "(42) 9 9839-9093",
-      "cep": "85010-040",
-      "city": "Guarapuava",
-      "state": "PR",
-      "email": "jonhcena.guga@gmail.com",
-      "status": "true",
-      "id": 8
-    },
-    {
-      "businessName": "Aaaaaa",
-      "cnpj": "12.345.678/9012-35",
-      "name": "Flamengo da gama de regatas football club",
-      "phone": "(42) 9 9839-9093",
-      "cep": "85010-040",
-      "city": "Guarapuava",
-      "state": "PR",
-      "email": "jonhcena.guga@gmail.com",
-      "status": "false",
-      "id": 9
     },
     {
       "businessName": "Corinthians",
@@ -75,24 +51,6 @@
   ],
   "users": [
     {
-      "userName": "Gustavo",
-      "cpf": "111.111.111-11",
-      "email": "jonhcena.guga@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "gustavo2",
-      "confPassword": "gustavo2",
-      "id": 2
-    },
-    {
-      "userName": "Maria Porcina",
-      "cpf": "123.456.789-10",
-      "email": "bbbbb@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "Maria@maria",
-      "confPassword": "Maria@maria",
-      "id": 3
-    },
-    {
       "userName": "Hudson Carolino",
       "cpf": "000.000.000-00",
       "email": "hudson@gmail.com",
@@ -102,12 +60,12 @@
       "id": 6
     },
     {
-      "userName": "Gustavo",
-      "cpf": "111.111.111-11",
-      "email": "jonhcena.guga@gmail.com",
-      "phone": "(42) 9 9839-9093",
-      "password": "gustavo12",
-      "confPassword": "gustavo12",
+      "userName": "Maria Porcina",
+      "cpf": "000.000.000-00",
+      "email": "maria@gmail.com",
+      "phone": "(99) 9 9999-9999",
+      "password": "12345678",
+      "confPassword": "12345678",
       "id": 7
     },
     {
