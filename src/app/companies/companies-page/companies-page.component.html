@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let company of companies">
-                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.businessName }}<br>{{ company.name }}</a></td>
+                        <td><a routerLink="/empresas/{{ company.id }}">{{ company.businessName | uppercase}}<br>{{ company.name | uppercase}}</a></td>
                         <td><a routerLink="/empresas/{{ company.id }}">{{ company.cnpj }}<br>{{ company.phone }}</a></td>
                         <td class="d-none d-md-table-cell">{{ company.city }}<br>{{ company.state }}</td>
                         <td class="d-none d-md-table-cell">{{ company.status ? 'Ativa' : 'Inativa' }}</td>

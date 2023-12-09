@@ -37,14 +37,14 @@
       "id": 11
     },
     {
-      "businessName": "minha empresa",
-      "cnpj": "00.000.000/0000-00",
-      "name": "empresa",
-      "phone": "(99) 9 9999-9999",
-      "cep": "85010-070",
+      "businessName": "Corinthians",
+      "cnpj": "12.345.678/9012-35",
+      "name": "Corinthians",
+      "phone": "(42) 9 9839-9093",
+      "cep": "85010-040",
       "city": "Guarapuava",
       "state": "PR",
-      "email": "contato@empresa.com",
+      "email": "jonhcena.guga@gmail.com",
       "status": "true",
       "id": 12
     }
@@ -67,6 +67,33 @@
       "password": "12345678",
       "confPassword": "12345678",
       "id": 7
+    },
+    {
+      "userName": "Maria Maria Maria",
+      "cpf": "111.111.111-11",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "gugsguga844",
+      "confPassword": "gugsguga844",
+      "id": 8
+    },
+    {
+      "userName": "Maria Porcina Flamengo da Gama",
+      "cpf": "111.111.111-11",
+      "email": "afgafdg@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "gugsguga81",
+      "confPassword": "gugsguga81",
+      "id": 9
+    },
+    {
+      "userName": "Gustavo",
+      "cpf": "111.111.111-11",
+      "email": "jonhcena.guga@gmail.com",
+      "phone": "(42) 9 9839-9093",
+      "password": "abc12345678",
+      "confPassword": "abc12345678",
+      "id": 10
     }
   ]
 }

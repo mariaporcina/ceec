@@ -40,7 +40,7 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let user of users">
-                        <td><a routerLink="/usuarios/{{ user.id }}">{{ user.userName }}</a></td>
+                        <td><a routerLink="/usuarios/{{ user.id }}">{{ user.userName | titlecase}}</a></td>
                         <td>{{ user.cpf }}</td>
                         <td class="d-none d-md-table-cell">{{ user.email }}
                         <td class="d-none d-md-table-cell">{{ user.phone }}</td>
