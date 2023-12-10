@@ -11,7 +11,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "develop": "npm run build && npm run start",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "json:server": "json-server --watch db.json",
+    "json:server:routes": "json-server --watch db.json --routes routes.json"
   },
   "private": true,
   "dependencies": {
