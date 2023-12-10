@@ -13,6 +13,10 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 [Link para o Figma](https://www.figma.com/file/Jgk1Gzk14xjlOer6w0YrFg/Contabilist?type=design&node-id=2%3A43&mode=design&t=mixb6P74vqDdVwi0-1)
 
+## Apresentação
+
+[Link para a apresentação](https://drive.google.com/file/d/1otEOniNtvykymG87L2S2Veq8FGkDXTfP/view?usp=sharing)
+
 ## Checklist
 
 ### RA1 - Prototipar e projetar interfaces gráficas de usuário, considerando princípios de usabilidade e experiência do usuário. 
